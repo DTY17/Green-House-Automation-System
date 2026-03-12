@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: auth
+          uri: lb://auth
+          predicates:
+            - Path=/auth/**
+
+        - id: device
+          uri: lb://device
+          predicates:
+            - Path=/device/**
+
+        - id: sensor
+          uri: lb://sensor
+          predicates:
+            - Path=/sensor/**
+
+        - id: automation
+          uri: lb://automation
+          predicates:
+            - Path=/automation/**
+
+        - id: zone
+          uri: lb://zone
+          predicates:
+            - Path=/zone/**
+
+server:
+  port: 8080
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+jwt:
+  secret: mySuperSecretKeyForJWTSigningThatIsLongEnough

@@ -1,0 +1,9 @@
+package com.java.zonemanagementservice.config;
+
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@ComponentScan("com.java.zonemanagementservice.dto")
+public class DtoConfig {
+}

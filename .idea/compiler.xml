@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="api-gateway" />
+        <module name="discoveryservice" />
+        <module name="auth" />
+      </profile>
+      <profile name="Annotation profile for SensorelemetService" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.42/lombok-1.18.42.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.42/lombok-1.18.42.jar" />
+        </processorPath>
+        <module name="AutomationControlService" />
+        <module name="SensorelemetService" />
+      </profile>
+      <profile name="Annotation profile for devices" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.42/lombok-1.18.42.jar" />
+        </processorPath>
+        <module name="devices" />
+        <module name="ZoneManagementService" />
+        <module name="CropInventoryService" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="AGMS_api_gateway" target="21" />
+      <module name="app-gateway" target="21" />
+      <module name="Automation_ControlService" target="21" />
+      <module name="device" target="21" />
+      <module name="gateway" target="21" />
+      <module name="sensorTelemetryService" target="21" />
+      <module name="testCon" target="21" />
+      <module name="testService" target="21" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="AGMS_api_gateway" options="-parameters" />
+      <module name="AutomationControlService" options="-parameters" />
+      <module name="Automation_ControlService" options="-parameters" />
+      <module name="CropInventoryService" options="-parameters" />
+      <module name="SensorelemetService" options="-parameters" />
+      <module name="ZoneManagementService" options="-parameters" />
+      <module name="api-gateway" options="-parameters" />
+      <module name="app-gateway" options="-parameters" />
+      <module name="auth" options="-parameters" />
+      <module name="device" options="-parameters" />
+      <module name="devices" options="-parameters" />
+      <module name="discoveryservice" options="-parameters" />
+      <module name="gateway" options="-parameters" />
+      <module name="sensorTelemetryService" options="-parameters" />
+      <module name="testCon" options="-parameters" />
+      <module name="testService" options="-parameters" />
+    </option>
+  </component>
+</project>
