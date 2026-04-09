@@ -127,9 +127,4 @@ public class AuthController {
         responseDto.setToken(newToken);
         return ResponseEntity.ok(responseDto);
     }
-
-    @GetMapping
-    public String test () {
-        return "auth init";
-    }
 }

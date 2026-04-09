@@ -33,6 +33,15 @@
         <module name="ZoneManagementService" />
         <module name="CropInventoryService" />
       </profile>
+      <profile name="Annotation profile for iot-service" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar" />
+        </processorPath>
+        <module name="iot-service" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="AGMS_api_gateway" target="21" />
@@ -60,6 +69,7 @@
       <module name="devices" options="-parameters" />
       <module name="discoveryservice" options="-parameters" />
       <module name="gateway" options="-parameters" />
+      <module name="iot-service" options="-parameters" />
       <module name="sensorTelemetryService" options="-parameters" />
       <module name="testCon" options="-parameters" />
       <module name="testService" options="-parameters" />

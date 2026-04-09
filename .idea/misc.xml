@@ -20,6 +20,7 @@
         <option value="$PROJECT_DIR$/devices/pom.xml" />
         <option value="$PROJECT_DIR$/AutomationControlService/pom.xml" />
         <option value="$PROJECT_DIR$/SensorelemetService/pom.xml" />
+        <option value="$PROJECT_DIR$/deviceIOT/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

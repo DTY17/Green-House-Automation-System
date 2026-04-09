@@ -97,7 +97,6 @@ public class ZoneController {
     public ResponseEntity<Zone> getZone (@PathVariable String id) {
         try {
             Zone list = zoneModel.findByID(id);
-            System.out.println(list.getMaxTemp());
             return ResponseEntity.ok(list);
 
         } catch (Exception e) {
