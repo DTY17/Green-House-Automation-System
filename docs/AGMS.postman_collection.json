@@ -1,0 +1,627 @@
+{
+  "info": {
+    "_postman_id": "f4bc0d78-153d-4d4f-a619-f9e36618f283",
+    "name": "AGMS",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "44945567"
+  },
+  "item": [
+    {
+      "name": "Sensor",
+      "item": [
+        {
+          "name": "START SENSOR",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"accessToken\":\"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0MjIiLCJpYXQiOjE3NzU3NTczOTAsImV4cCI6MTc3NTc2MDk5MH0.hK2j9EFaiTiGDeEmJsa3j-_UcUL2ax5Ez52fZeicR0U\",\r\n    \"refreshToken\":\"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0MjIiLCJpYXQiOjE3NzU3NTczOTAsImV4cCI6MTc3NjE4OTM5MH0.VlVtYoETWySUzhGOBm7VujX1llMWL2Ksjuf4tQ0Gr9Y\",\r\n    \"IotAccessToken\": \"eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiVVNFUiIsInVzZXJJZCI6ImQ2ZmFkZDRlLTA4MGYtNDUzOS05MmM5LWU2NzFhNmQ2YjAzMCIsInN1YiI6InQyMiIsImlhdCI6MTc3NTc1NzM5MCwiZXhwIjoxNzc1NzU4MjkwfQ.31Ge0E-R-ON4Frr21Y-mxA-L9AAFS7SE6_Q_VzkAMHY\",\r\n    \"IotRefreshToken\": \"eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiVVNFUiIsInVzZXJJZCI6ImQ2ZmFkZDRlLTA4MGYtNDUzOS05MmM5LWU2NzFhNmQ2YjAzMCIsInN1YiI6InQyMiIsImlhdCI6MTc3NTc1NzM5MCwiZXhwIjoxNzc2MzYyMTkwfQ.MipwbzkPNo1S3bUkoMgo1ExLnWs444a4eegKv7iu_78\",\r\n    \"start\":true,\r\n    \"deviceId\":\"e1860cca-91e6-4561-ab11-11b4e17557f1\",\r\n    \"username\":\"00123456789\",\r\n    \"password\":\"0123456789\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8086/Sensor/v1/api/start",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8086",
+              "path": [
+                "Sensor",
+                "v1",
+                "api",
+                "start"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Crop",
+      "item": []
+    },
+    {
+      "name": "API Gateway",
+      "item": []
+    },
+    {
+      "name": "Zone",
+      "item": [
+        {
+          "name": "SAVE ZONE",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": 101,\r\n  \"zoneName\": \"Zone-X\",\r\n  \"minTemp\": 18.5,\r\n  \"maxTemp\": 32.7,\r\n  \"iotAccessToken\": \"eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiVVNFUiIsInVzZXJJZCI6ImQ2ZmFkZDRlLTA4MGYtNDUzOS05MmM5LWU2NzFhNmQ2YjAzMCIsInN1YiI6InQyMiIsImlhdCI6MTc3NTc1NzM5MCwiZXhwIjoxNzc1NzU4MjkwfQ.31Ge0E-R-ON4Frr21Y-mxA-L9AAFS7SE6_Q_VzkAMHY\",\r\n  \"iotRefreshToken\": \"eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiVVNFUiIsInVzZXJJZCI6ImQ2ZmFkZDRlLTA4MGYtNDUzOS05MmM5LWU2NzFhNmQ2YjAzMCIsInN1YiI6InQyMiIsImlhdCI6MTc3NTc1NzM5MCwiZXhwIjoxNzc2MzYyMTkwfQ.MipwbzkPNo1S3bUkoMgo1ExLnWs444a4eegKv7iu_78\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8087/zone/v1/api/save",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8087",
+              "path": [
+                "zone",
+                "v1",
+                "api",
+                "save"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE ZONE",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": 1,\r\n  \"zoneName\": \"Tomato Zone\",\r\n  \"minTemp\": 20.5,\r\n  \"maxTemp\": 30.0,\r\n  \"iotAccessToken\": \"your-access-token\",\r\n  \"iotRefreshToken\": \"your-refresh-token\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8087/zone/v1/api/delete",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8087",
+              "path": [
+                "zone",
+                "v1",
+                "api",
+                "delete"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ZONE UPDATE",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": 1,\r\n  \"zoneName\": \"Tomato Zone\",\r\n  \"minTemp\": 20.5,\r\n  \"maxTemp\": 30.0,\r\n  \"iotAccessToken\": \"your-access-token\",\r\n  \"iotRefreshToken\": \"your-refresh-token\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8087/zone/v1/api/update",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8087",
+              "path": [
+                "zone",
+                "v1",
+                "api",
+                "update"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET BY ID",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8087/zone/v1/api/get/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8087",
+              "path": [
+                "zone",
+                "v1",
+                "api",
+                "get",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "LOGIN",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"username\": \"t22\",\r\n  \"password\": \"t22\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/auth/v1/api/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "auth",
+                "v1",
+                "api",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "REGISTER",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"username\": \"t22\",\r\n  \"password\": \"t22\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/auth/v1/api/register",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "auth",
+                "v1",
+                "api",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "REFRESHTOKEN",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"username\":\"1234\",\r\n    \"token\":\"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMjM0IiwiaWF0IjoxNzcyNDUwNjE5LCJleHAiOjE3NzI0NTQyMTl9.5NV0QjbKHqtgicIw-FWlTlo48etgUkdaBS591tF0HbQ\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/auth/v1/api/refresh-token",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "auth",
+                "v1",
+                "api",
+                "refresh-token"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Automated",
+      "item": [
+        {
+          "name": "DATA SET",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIwMDEyMzQ1Njc4OSIsImlhdCI6MTc3MzA0NzYwMSwiZXhwIjoxNzczMDUxMjAxfQ.Y86wiaqBvWCc5AJm8U0iGNf-87hlWvuidUwlja4fGqI",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"temperature\":23.32,\r\n    \"humidity\":23.33,\r\n    \"timestamp\":\"2026-03-09T11:12:39.762Z\",\r\n    \"deviceId\":,\r\n    \"accessToken\":,\r\n    \"refreshToken\":,\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8085/automation/v1/api",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8085",
+              "path": [
+                "automation",
+                "v1",
+                "api"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET COMMAND",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"deviceId\":\"XX01\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8085/automation/v1/api/command",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8085",
+              "path": [
+                "automation",
+                "v1",
+                "api",
+                "command"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "TEST",
+      "item": [
+        {
+          "name": "Device-save",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMjM0IiwiaWF0IjoxNzcyOTU0MjE0LCJleHAiOjE3NzI5NTc4MTR9.2G8DYCZLD96dpibUBEpQInwq4--M7HVnlURmP4umOog",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"deviceName\":\"water device 2\",\r\n    \"userID\":\"user01 2\",\r\n    \"zoneId\":\"zone01 2\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/device/v1/api",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "device",
+                "v1",
+                "api"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Devices-get",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMjM0IiwiaWF0IjoxNzcyOTU2MjI1LCJleHAiOjE3NzI5NTk4MjV9.IzVnTOoUy9q6zMj9CCG4EWzr-aWPPwRFmhqGbZxmpFQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/device/v1/api",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "device",
+                "v1",
+                "api"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Device-Get-ID",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMjM0IiwiaWF0IjoxNzcyOTU2MjI1LCJleHAiOjE3NzI5NTk4MjV9.IzVnTOoUy9q6zMj9CCG4EWzr-aWPPwRFmhqGbZxmpFQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/device/v1/api/telemetry/3",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "device",
+                "v1",
+                "api",
+                "telemetry",
+                "3"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "DEVICE IOT",
+      "item": [
+        {
+          "name": "IOT login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"username\":\"00123456789\",\r\n    \"password\":\"0123456789\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://104.211.95.241:8080/api/auth/login",
+              "protocol": "http",
+              "host": [
+                "104",
+                "211",
+                "95",
+                "241"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all device IOT",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiVVNFUiIsInVzZXJJZCI6ImFlOTM0NDhlLTllMmMtNGU4OS1iNzBlLTMwZWU3NGJhYzRiMiIsInN1YiI6IjAwMTIzNDU2Nzg5IiwiaWF0IjoxNzczMDU4NzExLCJleHAiOjE3NzMwNTk2MTF9.LHsEjRuHDNT4ETnjDG9rPcvXkbQXHoMooZV9Pu_ZXTk",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://104.211.95.241:8080/api/devices",
+              "protocol": "http",
+              "host": [
+                "104",
+                "211",
+                "95",
+                "241"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "devices"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add device IOT",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiVVNFUiIsInVzZXJJZCI6ImFlOTM0NDhlLTllMmMtNGU4OS1iNzBlLTMwZWU3NGJhYzRiMiIsInN1YiI6IjAwMTIzNDU2Nzg5IiwiaWF0IjoxNzczMDU4NzExLCJleHAiOjE3NzMwNTk2MTF9.LHsEjRuHDNT4ETnjDG9rPcvXkbQXHoMooZV9Pu_ZXTk",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Lab-Temp-Sensor\",\r\n  \"zoneId\": \"Zone-A\" \r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://104.211.95.241:8080/api/devices",
+              "protocol": "http",
+              "host": [
+                "104",
+                "211",
+                "95",
+                "241"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "devices"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "IOT get device daa by id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiVVNFUiIsInVzZXJJZCI6ImFlOTM0NDhlLTllMmMtNGU4OS1iNzBlLTMwZWU3NGJhYzRiMiIsInN1YiI6IjAwMTIzNDU2Nzg5IiwiaWF0IjoxNzczMDU5MjM1LCJleHAiOjE3NzMwNjAxMzV9.TeUF2n3Y8Ksz9KNcROaQnVbVBF5eCFqyiE0ZiUzn7zQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://104.211.95.241:8080/api/devices/telemetry/e1860cca-91e6-4561-ab11-11b4e17557f1",
+              "protocol": "http",
+              "host": [
+                "104",
+                "211",
+                "95",
+                "241"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "devices",
+                "telemetry",
+                "e1860cca-91e6-4561-ab11-11b4e17557f1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
