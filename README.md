@@ -163,30 +163,7 @@ Authorization: Bearer <token>
 ---
 
 # 🔗 API Endpoints (Summary)
-
-## Zone Service
-
-* `POST /api/zones`
-* `GET /api/zones/{id}`
-* `PUT /api/zones/{id}`
-* `DELETE /api/zones/{id}`
-
-## Sensor Service
-
-* `GET /api/sensors/latest`
-
-## Automation Service
-
-* `POST /api/automation/process`
-* `GET /api/automation/logs`
-
-## Crop Service
-
-* `POST /api/crops`
-* `PUT /api/crops/{id}/status`
-* `GET /api/crops`
-
----
+Provied POSTMAN COLLECTION in ./docs/
 
 # 🧪 Testing
 
