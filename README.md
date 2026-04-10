@@ -74,7 +74,7 @@ Start services in the following order:
 ### 1. Config Server
 
 ```bash
-cd config-server
+cd config-server-location
 mvn spring-boot:run
 ```
 
@@ -83,7 +83,7 @@ mvn spring-boot:run
 ### 2. Eureka Server
 
 ```bash
-cd eureka-server
+cd eureka-server-location
 mvn spring-boot:run
 ```
 
@@ -98,7 +98,7 @@ http://localhost:8761
 ### 3. API Gateway
 
 ```bash
-cd api-gateway
+cd api-gateway-location
 mvn spring-boot:run
 ```
 
@@ -109,26 +109,9 @@ mvn spring-boot:run
 Start each service:
 
 ```bash
-cd zone-service
+cd service-location
 mvn spring-boot:run
-```
 
-```bash
-cd sensor-service
-mvn spring-boot:run
-```
-
-```bash
-cd automation-service
-mvn spring-boot:run
-```
-
-```bash
-cd crop-service
-mvn spring-boot:run
-```
-
----
 
 # 🔄 System Workflow
 
